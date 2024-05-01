@@ -17,7 +17,7 @@ func TestOpenFile(t *testing.T) {
 // Expected test.txt to exist
 func TestOpenFileExistingFile(t *testing.T) {
 	var file *os.File
-	err := openFile("../original-dump/test.txt", &file)
+	err := openFile("../data/test.txt", &file)
 	if err != nil {
 		t.Errorf("Expected test.txt to exist")
 	}

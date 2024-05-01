@@ -10,14 +10,14 @@ import (
 )
 
 func main() {
-	filePathLocation := "./original-dump/dump.txt"
-	fileOutputLocation := "./dumps"
+	filePathLocation := "./data/dump.txt"
+	fileOutputLocation := "./output"
 
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Println("\033[32mOpen Library Cypher .txt Dump Parser\033[0m")
 	fmt.Println("If you don't have a .txt dump, you can download it from https://openlibrary.org/data/ol_dump_latest.txt.gz")
-	fmt.Println("\033[31mInput your dump.txt file location.\033[0m (e.g. './original-dump/dump.txt')")
-	fmt.Println("Default location is './original-dump/dump.txt")
+	fmt.Println("\033[31mInput your dump.txt file location.\033[0m (e.g. './data/dump.txt')")
+	fmt.Println("Default location is './data/dump.txt")
 	fmt.Println("Press return to skip.")
 	fmt.Println("---------------------")
 
@@ -32,8 +32,8 @@ func main() {
 	fmt.Println("File path location: \033[31m", filePathLocation, "\033[0m")
 	fmt.Println("---------------------")
 
-	fmt.Println("\033[31mInput your output folder location.\033[0m (e.g. './dumps')")
-	fmt.Println("Default location is './dumps'")
+	fmt.Println("\033[31mInput your output folder location.\033[0m (e.g. './output')")
+	fmt.Println("Default location is './output'")
 	fmt.Println("Press return to skip.")
 	fmt.Println("---------------------")
 
