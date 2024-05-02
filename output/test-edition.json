@@ -1,0 +1,91 @@
+[
+  {
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-30T09:38:13.731961"
+    },
+    "isbn_10": [
+      "0107806584"
+    ],
+    "isbn_13": [
+      "9780107806583"
+    ],
+    "key": "/books/OL10000226M",
+    "languages": [
+      {
+        "key": "/languages/eng"
+      }
+    ],
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2011-04-29T04:03:50.965033"
+    },
+    "latest_revision": 2,
+    "oclc_numbers": [
+      "614435142"
+    ],
+    "physical_dimensions": "12.5 x 9.1 x 2.9 inches",
+    "physical_format": "Hardcover",
+    "publish_date": "September 15, 2004",
+    "publishers": [
+      "Stationery Office"
+    ],
+    "revision": 2,
+    "subjects": [
+      "Reference - General",
+      "Business \u0026 Economics",
+      "Business/Economics"
+    ],
+    "subtitle": "003-04, 23 February - 11 March 2004",
+    "title": "Parliamentary Debates, House Of Lords - Bound",
+    "type": {
+      "key": "/type/edition"
+    },
+    "weight": "7 pounds"
+  },
+  {
+    "authors": [
+      {
+        "key": "/authors/OL46053A"
+      }
+    ],
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-30T09:38:13.731961"
+    },
+    "isbn_10": [
+      "010836027X"
+    ],
+    "isbn_13": [
+      "9780108360275"
+    ],
+    "key": "/books/OL10000266M",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2022-07-17T12:17:22.544854"
+    },
+    "latest_revision": 4,
+    "number_of_pages": 2,
+    "oclc_numbers": [
+      "67830988"
+    ],
+    "physical_format": "Paperback",
+    "publish_date": "June 26, 1997",
+    "publishers": [
+      "Stationery Office Books"
+    ],
+    "revision": 4,
+    "source_records": [
+      "bwb:9780108360275"
+    ],
+    "title": "Chronically Sick and Disabled Persons (Amendment) Bill [H.L.]",
+    "type": {
+      "key": "/type/edition"
+    },
+    "works": [
+      {
+        "key": "/works/OL14881746W"
+      }
+    ]
+  }
+]

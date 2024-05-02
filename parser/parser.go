@@ -18,7 +18,6 @@ const (
 func Parse(filePath string, fileOutput string) error {
 	fmt.Println("Parsing the .txt dump file inside ", filePath, " folder")
 	var file *os.File
-
 	err := openFile(filePath, &file)
 	if err != nil {
 		return err
@@ -29,7 +28,7 @@ func Parse(filePath string, fileOutput string) error {
 
 	scanner := bufio.NewScanner(file)
 	buf := make([]byte, 0, 64*1024)
-	scanner.Buffer(buf, 1024*1024)
+	scanner.Buffer(buf, 2048*1024)
 
 	dataMap := make(map[string][]map[string]interface{})
 	batchSize := 100000 // Define batch size
@@ -109,7 +108,7 @@ func insertJson(dataType string, dataMap map[string][]map[string]interface{}, js
 	case EditionTypeKey:
 		dataMap["edition"] = append(dataMap["edition"], tempMap)
 	default:
-		fmt.Println("Unknown data type:", dataType)
+		// fmt.Println("Unknown data type:", dataType)
 	}
 
 	return nil

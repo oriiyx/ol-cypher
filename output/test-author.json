@@ -1,0 +1,95 @@
+[
+  {
+    "created": {
+      "type": "/type/datetime",
+      "value": "2021-12-26T21:23:34.097804"
+    },
+    "key": "/authors/OL10000086A",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2021-12-26T21:23:34.097804"
+    },
+    "latest_revision": 1,
+    "name": "Heidelore Terlep",
+    "revision": 1,
+    "source_records": [
+      "bwb:9783850406925"
+    ],
+    "type": {
+      "key": "/type/author"
+    }
+  },
+  {
+    "key": "/authors/OL1000025A",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-08-20T17:57:03.386302"
+    },
+    "name": "Khālid ibn Aḥmad Sulaymān",
+    "personal_name": "Khālid ibn Aḥmad Sulaymān",
+    "revision": 2,
+    "type": {
+      "key": "/type/author"
+    }
+  },
+  {
+    "created": {
+      "type": "/type/datetime",
+      "value": "2021-12-26T23:36:54.789075"
+    },
+    "key": "/authors/OL10000943A",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2021-12-26T23:36:54.789075"
+    },
+    "latest_revision": 1,
+    "name": "J.B. Davis",
+    "revision": 1,
+    "source_records": [
+      "bwb:9781469765006"
+    ],
+    "type": {
+      "key": "/type/author"
+    }
+  },
+  {
+    "created": {
+      "type": "/type/datetime",
+      "value": "2021-12-27T00:11:06.836897"
+    },
+    "key": "/authors/OL10001160A",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2021-12-27T00:11:06.836897"
+    },
+    "latest_revision": 1,
+    "name": "Darcy Daniel",
+    "revision": 1,
+    "source_records": [
+      "bwb:9781426895012"
+    ],
+    "type": {
+      "key": "/type/author"
+    }
+  },
+  {
+    "created": {
+      "type": "/type/datetime",
+      "value": "2021-12-27T01:27:04.622080"
+    },
+    "key": "/authors/OL10001630A",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2021-12-27T01:27:04.622080"
+    },
+    "latest_revision": 1,
+    "name": "Nebraska Writers Collective",
+    "revision": 1,
+    "source_records": [
+      "bwb:9780988950719"
+    ],
+    "type": {
+      "key": "/type/author"
+    }
+  }
+]
