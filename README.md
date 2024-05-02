@@ -46,10 +46,10 @@ You can use the `reader` module to read the data from the json files.
 Example of how to read the data from the json files:
 
 ```go
-    r := reader.Reader{
-AuthorJsonLocation:  "./output/author.json",
-WorkJsonLocation:    "./output/work.json",
-EditionJsonLocation: "./output/edition.json",
+r := reader.Reader {
+    AuthorJsonLocation:  "./output/author.json",
+    WorkJsonLocation:    "./output/work.json",
+    EditionJsonLocation: "./output/edition.json",
 }
 
 authorChannel := make(chan models.Author)
