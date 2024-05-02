@@ -37,3 +37,36 @@ To parse the files you can run the binary like this:
 ```bash
 ./bin/parser
 ```
+
+## How to read the data from the json files
+
+Currently, I have implemented 3 models to read the data from the json files.
+You can use the `reader` module to read the data from the json files.
+
+Example of how to read the data from the json files:
+
+```go
+    r := reader.Reader{
+AuthorJsonLocation:  "./output/author.json",
+WorkJsonLocation:    "./output/work.json",
+EditionJsonLocation: "./output/edition.json",
+}
+
+authorChannel := make(chan models.Author)
+go r.ReadAuthors(authorChannel)
+for author := range authorChannel {
+// do something with the author data
+}
+```
+
+You can use the `ReadAuthors`, `ReadWorks`, and `ReadEditions` functions to read the data from the json files.
+
+## Missing read features
+
+I've implemented only the basic read features for the models.
+Since data is not standardized in the dump files, I've implemented some json.RawMessage(example: `bio` in Author model)
+fields in the models and skip some that I think are not important. (example is `table_of_contents` field in the Edition
+model)
+
+If you need to read some other fields you can add them to the models and implement the read feature in the reader
+module.
