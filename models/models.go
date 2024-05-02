@@ -2,5 +2,5 @@ package models
 
 type Author struct {
 	Name string
-	Key string
+	Key  string
 }
