@@ -28,7 +28,7 @@ func Parse(filePath string, fileOutput string) error {
 
 	scanner := bufio.NewScanner(file)
 	buf := make([]byte, 0, 64*1024)
-	scanner.Buffer(buf, 2048*1024)
+	scanner.Buffer(buf, 4096*1024)
 
 	dataMap := make(map[string][]map[string]interface{})
 	batchSize := 100000 // Define batch size
