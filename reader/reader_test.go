@@ -21,6 +21,9 @@ func TestReader_ReadEditions(t *testing.T) {
 		if edition.Title == "" {
 			t.Error("Edition title is empty")
 		}
+		if edition.ISBN10[0] == "" {
+			t.Error("Edition ISBN10 is empty")
+		}
 	}
 }
 

@@ -27,11 +27,11 @@ type Author struct {
 	// 	Value string `json:"value"`
 	// } `json:"bio,omitempty"`
 	Bio          json.RawMessage `json:"bio,omitempty"`
-	BirthDate    *string         `json:"birth_date,omitempty"`
-	DeathDate    *string         `json:"death_date,omitempty"`
-	PersonalName *string         `json:"personal_name,omitempty"`
+	BirthDate    string          `json:"birth_date,omitempty"`
+	DeathDate    string          `json:"death_date,omitempty"`
+	PersonalName string          `json:"personal_name,omitempty"`
 	Photos       []int           `json:"photos,omitempty"`
-	RemoteIDs    *struct {
+	RemoteIDs    struct {
 		ISNI     string `json:"isni,omitempty"`
 		VIAF     string `json:"viaf,omitempty"`
 		Wikidata string `json:"wikidata,omitempty"`
@@ -64,8 +64,8 @@ type Work struct {
 
 	// Optional fields
 	Description      json.RawMessage `json:"description,omitempty"`
-	FirstPublishDate *string         `json:"first_publish_date,omitempty"`
-	FirstSentence    *struct {
+	FirstPublishDate string          `json:"first_publish_date,omitempty"`
+	FirstSentence    struct {
 		Type  string `json:"type"`
 		Value string `json:"value"`
 	} `json:"first_sentence,omitempty"`
@@ -73,10 +73,10 @@ type Work struct {
 }
 
 type Edition struct {
-	Authors []*struct {
+	Authors []struct {
 		Key string `json:"key"`
 	} `json:"authors,omitempty"`
-	ByStatement *string `json:"by_statement,omitempty"`
+	ByStatement string `json:"by_statement,omitempty"`
 	Created     struct {
 		Type  string `json:"type"`
 		Value string `json:"value"`
@@ -98,11 +98,11 @@ type Edition struct {
 	LCClassifications  []string `json:"lc_classifications,omitempty"`
 	LCCN               []string `json:"lccn,omitempty"`
 	Location           []string `json:"location,omitempty"`
-	NumberOfPages      *int     `json:"number_of_pages,omitempty"`
-	Pagination         *string  `json:"pagination,omitempty"`
-	PhysicalDimensions *string  `json:"physical_dimensions,omitempty"`
+	NumberOfPages      int      `json:"number_of_pages,omitempty"`
+	Pagination         string   `json:"pagination,omitempty"`
+	PhysicalDimensions string   `json:"physical_dimensions,omitempty"`
 	PhysicalFormat     string   `json:"physical_format,omitempty"`
-	PublishCountry     *string  `json:"publish_country,omitempty"`
+	PublishCountry     string   `json:"publish_country,omitempty"`
 	PublishDate        string   `json:"publish_date"`
 	PublishPlaces      []string `json:"publish_places,omitempty"`
 	Publishers         []string `json:"publishers,omitempty"`
@@ -112,12 +112,12 @@ type Edition struct {
 	} `json:"scan_records,omitempty"`
 	SourceRecords []string `json:"source_records,omitempty"`
 	Subjects      []string `json:"subjects,omitempty"`
-	Subtitle      *string  `json:"subtitle,omitempty"`
+	Subtitle      string   `json:"subtitle,omitempty"`
 	Title         string   `json:"title"`
 	Type          struct {
 		Key string `json:"key"`
 	} `json:"type"`
-	Weight *string `json:"weight,omitempty"`
+	Weight string `json:"weight,omitempty"`
 	Works  []struct {
 		Key string `json:"key"`
 	} `json:"works,omitempty"`
