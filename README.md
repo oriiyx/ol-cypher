@@ -70,3 +70,12 @@ model)
 
 If you need to read some other fields you can add them to the models and implement the read feature in the reader
 module.
+
+## Note to self
+
+How to add the new patch number?
+```bash
+git tag v0.1.4
+git push origin v0.1.4
+GOWORK=off GOPROXY=proxy.golang.org go list -m github.com/oriiyx/ol-cypher@v0.1.4
+```
