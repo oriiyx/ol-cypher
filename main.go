@@ -11,6 +11,7 @@ func main() {
 		AuthorJsonLocation:  "./output/author.json",
 		WorkJsonLocation:    "./output/work.json",
 		EditionJsonLocation: "./output/edition.json",
+		RatingJsonLocation:  "./output/ratings.json",
 	}
 
 	authorChannel := make(chan models.Author)

@@ -12,6 +12,7 @@ type Reader struct {
 	AuthorJsonLocation  string
 	WorkJsonLocation    string
 	EditionJsonLocation string
+	RatingJsonLocation  string
 }
 
 // ReadAuthors streams authors from the JSON file specified in AuthorJsonLocation.
