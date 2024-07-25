@@ -12,6 +12,7 @@ import (
 
 type RatingsJson struct {
 	Work       string
+	Edition    string
 	Rating     int
 	RatingDate string
 }
@@ -60,6 +61,7 @@ func ParseRatings(filePath string, fileOutput string) error {
 
 		ratingJson := RatingsJson{
 			Work:       parts[0],
+			Edition:    parts[1],
 			Rating:     rating,
 			RatingDate: parts[3],
 		}

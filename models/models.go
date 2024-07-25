@@ -2,6 +2,13 @@ package models
 
 import "encoding/json"
 
+type Ratings struct {
+	Rating     int    `json:"Rating"`
+	BookId     string `json:"Work"`
+	EditionId  string `json:"Edition"`
+	RatingDate string `json:"RatingDate"`
+}
+
 type Author struct {
 	Created struct {
 		Type  string `json:"type"`

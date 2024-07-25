@@ -7,6 +7,30 @@ import (
 	"github.com/oriiyx/ol-cypher/reader"
 )
 
+func TestReader_ReadRatings(t *testing.T) {
+	r := reader.Reader{
+		RatingJsonLocation: "../output/ratings.json",
+	}
+
+	rating1, rating2, rating3, rating4, rating5 := 1, 2, 3, 4, 5
+
+	ratingsChannel := make(chan models.Ratings)
+	go r.ReadRatings(ratingsChannel)
+	for rating := range ratingsChannel {
+		if rating.Rating != rating1 && rating.Rating != rating2 && rating.Rating != rating3 && rating.Rating != rating4 && rating.Rating != rating5 {
+			t.Error("Rating rating is empty")
+		}
+
+		if rating.BookId == "" {
+			t.Error("Rating book is empty")
+		}
+
+		if rating.RatingDate == "" {
+			t.Error("Rating date is empty")
+		}
+	}
+}
+
 func TestReader_ReadEditions(t *testing.T) {
 	r := reader.Reader{
 		EditionJsonLocation: "../output/test-edition.json",

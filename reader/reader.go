@@ -15,6 +15,39 @@ type Reader struct {
 	RatingJsonLocation  string
 }
 
+// ReadRatings streams authors from the JSON file specified in RatingJsonLocation.
+// It sends each author to the provided channel and closes the channel when done.
+func (r *Reader) ReadRatings(ch chan<- models.Ratings) {
+	file, err := os.Open(r.RatingJsonLocation)
+	if err != nil {
+		close(ch)
+		fmt.Println("Error opening JSON file:", err)
+		return
+	}
+	defer file.Close()
+
+	decoder := json.NewDecoder(file)
+
+	// Read opening bracket of the JSON array
+	if _, err := decoder.Token(); err != nil {
+		close(ch)
+		fmt.Println("Error reading start of JSON:", err)
+		return
+	}
+
+	for decoder.More() {
+		var rating models.Ratings
+		err := decoder.Decode(&rating)
+		if err != nil {
+			fmt.Println("Error decoding JSON:", err)
+			continue
+		}
+		ch <- rating
+	}
+
+	close(ch)
+}
+
 // ReadAuthors streams authors from the JSON file specified in AuthorJsonLocation.
 // It sends each author to the provided channel and closes the channel when done.
 func (r *Reader) ReadAuthors(ch chan<- models.Author) {
